@@ -1,0 +1,46 @@
+<html>
+
+<img id='negao' src='http://www.inf.ufrgs.br/site/wp-content/uploads/2014/11/cechin.png' width='0px' height='0px'>
+
+
+<script>
+
+
+
+var interval = setInterval(function(){
+var comecou = 0;
+  let imagem = document.getElementById('negao');
+  
+  let flip = imagem.style.transform;
+  if(flip == 'scaleX(-1)'){
+	imagem.style.cssText = '-webkit-transform: scaleX(1);transform: scaleX(1);';
+  }
+  else{
+	imagem.style.cssText = '-webkit-transform: scaleX(-1);transform: scaleX(-1);';
+  }
+	
+	imagem.width += 5;
+	
+	if(imagem.height <= 700){
+		imagem.height+=5;
+		}
+		else{
+			comecou = 1;
+		}
+		
+	if(comecou){
+		window.location = 'https://www.youtube.com/watch?v=YtpATpMKDkg&';
+		clearInterval(interval);
+	}
+		
+	imagem.style.transform = `rotate(${imagem.width}deg)`;
+	
+	
+
+}, 100);
+
+
+
+</script>
+
+</html>
